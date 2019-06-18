@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qf.mapper.TbItemMapper">
+    <!--添加商品信息-->
+     <insert id="saveItem" parameterType="com.qf.pojo.TbItem">
+         insert into tb_item(name,price,images) values(#{name},#{price},#{images})
+     </insert>
+    <!--查询全部商品信息-->
+    <select id="findAll" resultType="com.qf.pojo.TbItem">
+        select * from tb_item
+    </select>
+
+</mapper>
